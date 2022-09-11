@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { NotesContext } from "@/app";
+import { NotesContext } from "@/app/contexts";
 import { Navigation } from "./atoms";
 import { TopBar } from "./organisms";
 

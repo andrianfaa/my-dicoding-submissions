@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { LocalStorage } from "@/utils";
-import { SettingContext } from "@/app";
+import { SettingContext } from "@/app/contexts";
 
 export function useTheme() {
   const [theme, setTheme] = useState("light");

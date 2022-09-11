@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import { Remarkable } from "remarkable";
 import { PageLayout } from "@/components";
-import { NotesContext, NOTE_TITLE_PATTERN } from "@/app";
+import { NotesContext } from "@/app/contexts";
+import { NOTE_TITLE_PATTERN } from "@/app/constants";
 
 function NoteDetailsPage() {
   const [keyword, setKeyword] = useState("");

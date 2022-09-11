@@ -1,9 +1,8 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import {
-  SettingContext, NotesContext, DEFAULT_NOTES, DEFAULT_SETTING,
-} from "@/app";
+import { DEFAULT_NOTES, DEFAULT_SETTING } from "@/app/constants";
+import { SettingContext, NotesContext } from "@/app/contexts";
 import { Router } from "@/components";
 import { LocalStorage } from "@/utils";
 

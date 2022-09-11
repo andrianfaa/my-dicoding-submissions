@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useSearchParams, Link } from "react-router-dom";
-import { NOTE_TITLE_PATTERN } from "@/app";
+import { NOTE_TITLE_PATTERN } from "@/app/constants";
 import { PageLayout } from "@/components";
 
 function Error404Page() {
