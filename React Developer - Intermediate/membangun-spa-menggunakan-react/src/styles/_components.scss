@@ -1,0 +1,149 @@
+@layer components {
+  .container {
+    @apply mx-auto lg:max-w-[1080px] p-4;
+  }
+
+  .icon {
+    @apply text-base w-4 h-4;
+  }
+
+  .input {
+    &-base {
+      // transition: border 300ms ease-in-out;
+      @apply transition-[border] duration-200 ease-in-out;
+      @apply py-2.5 px-4 w-full rounded border-default border-color-border bg-transparent;
+      @apply dark:border-color-border-dark;
+      @apply hover:border-color-primary focus:border-color-primary dark:hover:border-color-primary;
+    }
+  }
+
+  .button {
+    &-base {
+      @apply transition-all duration-200 ease-in-out;
+      @apply p-3.5 rounded border-default border-color-border bg-transparent text-base;
+      @apply dark:text-color-base-dark dark:border-color-border-dark;
+      @apply hover:bg-color-border focus:bg-color-border dark:hover:bg-color-border-dark dark:focus:bg-color-border-dark;
+    }
+
+    &-primary {
+      @apply bg-color-primary text-color-headline-dark dark:text-color-headline-dark border-color-primary dark:border-color-primary;
+      @apply hover:bg-color-primary-hover focus:bg-color-primary-hover dark:hover:bg-color-primary-hover dark:focus:bg-color-primary-hover hover:border-color-primary-hover focus:border-color-primary-hover dark:hover:border-color-primary-hover dark:focus:border-color-primary-hover;
+    }
+  }
+
+  .switch {
+    @apply transition-[background] duration-200 ease-in-out;
+    @apply w-14 h-7 rounded-full bg-color-border relative flex items-center px-[3px];
+    @apply dark:bg-color-border-dark;
+
+    &-toggler {
+      @apply transition-all duration-200 ease-in-out;
+      @apply w-[22px] h-[22px] rounded-full bg-white block;
+    }
+
+    &.toggled {
+      @apply bg-color-primary;
+
+      .switch-toggler {
+        @apply translate-x-7;
+      }
+    }
+  }
+
+  .navigation {
+    &-button {
+      @apply shadow-lg relative z-10 button-base h-[60px] w-[60px] rounded-full bg-color-background dark:bg-color-background-dark flex flex-col items-center justify-center;
+
+      > #icon {
+        @apply transition-all duration-200 ease-in-out;
+        @apply h-[1px] w-5 block absolute bg-color-base dark:bg-color-base-dark;
+
+        &:nth-child(1) {
+          @apply translate-y-1;
+        }
+
+        &:nth-child(2) {
+          @apply -translate-y-1;
+        }
+      }
+
+      &.open {
+        @apply bg-color-border dark:bg-color-border-dark;
+
+        > #icon {
+          &:nth-child(1) {
+            @apply translate-y-0 -rotate-45;
+          }
+
+          &:nth-child(2) {
+            @apply translate-y-0 rotate-45;
+          }
+        }
+      }
+    }
+
+    &-links {
+      @apply transition-all duration-200 ease-in-out;
+      @apply absolute bottom-0 z-0 invisible opacity-0;
+
+      > a,
+      > button {
+        @apply shadow-lg button-base h-[60px] w-[60px] rounded-full bg-color-background dark:bg-color-background-dark flex flex-col items-center justify-center mb-2 last:mb-0;
+      }
+
+      &.open {
+        @apply visible opacity-100 bottom-[70px];
+      }
+
+      &-opened {
+        @apply transition-all duration-200 ease-in-out;
+        @apply absolute z-0 visible opacity-100 bottom-0;
+
+        > a,
+        > button {
+          @apply shadow-lg button-base h-[60px] w-[60px] rounded-full bg-color-background dark:bg-color-background-dark flex flex-col items-center justify-center mb-2 last:mb-0;
+        }
+      }
+    }
+  }
+
+  .compiled-notes {
+    > h1,
+    > h2 {
+      @apply text-xl md:text-2xl font-semibold md:leading-normal;
+    }
+
+    > h3 {
+      @apply text-lg md:text-xl font-semibold md:leading-normal;
+    }
+
+    ul {
+      @apply list-[inherit] list-inside my-0 leading-normal marker:mr-0;
+
+      > li {
+        @apply my-0 py-0 marker:mr-0;
+
+        > ul {
+          @apply ml-3 list-[circle] list-inside my-0 py-0;
+
+          > li {
+            @apply my-0 py-0 marker:mr-0;
+          }
+        }
+      }
+    }
+
+    ol {
+      @apply list-decimal list-inside;
+    }
+
+    b,
+    strong {
+      @apply font-semibold;
+    }
+
+    a {
+      @apply underline underline-offset-4;
+    }
+  }
+}

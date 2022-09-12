@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+[list]::-webkit-calendar-picker-indicator,
+[list]::-webkit-list-button {
+  display: none !important;
+}
+
+@import "./base";
+@import "./components";
+@import "./utilities";

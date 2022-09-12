@@ -1,0 +1,11 @@
+@layer utilities {
+  .border {
+    &-default {
+      @apply border-[1.5px];
+    }
+
+    &-b-default {
+      @apply border-b-[1.5px];
+    }
+  }
+}
