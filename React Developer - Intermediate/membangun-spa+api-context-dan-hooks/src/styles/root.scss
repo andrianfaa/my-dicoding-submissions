@@ -1,0 +1,9 @@
+*,
+*::before,
+*::after {
+  scroll-behavior: smooth !important;
+}
+
+@import "./base";
+@import "./components";
+@import "./utilities";

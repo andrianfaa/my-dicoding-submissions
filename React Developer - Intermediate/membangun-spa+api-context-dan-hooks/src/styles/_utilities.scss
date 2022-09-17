@@ -1,0 +1,32 @@
+.link {
+  &-base {
+    @apply text-color-headline underline-offset-4;
+    @apply dark:text-color-headline-dark;
+  }
+}
+
+.compiled-notes {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block: 0 0;
+  }
+
+  h1 {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-lg sm:text-xl md:text-2xl leading-3;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-base sm:text-lg md:text-xl m-0;
+  }
+}

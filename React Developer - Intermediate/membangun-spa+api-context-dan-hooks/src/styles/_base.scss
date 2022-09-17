@@ -1,0 +1,25 @@
+body {
+  @apply bg-color-background text-color-text;
+  @apply dark:bg-color-background-dark dark:text-color-text-dark;
+}
+
+a {
+  @apply text-color-text dark:text-color-text-dark;
+}
+
+input,
+button,
+textarea {
+  @apply outline-none text-base;
+  @apply disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-color-headline font-semibold tracking-tight;
+  @apply dark:text-color-headline-dark;
+}
