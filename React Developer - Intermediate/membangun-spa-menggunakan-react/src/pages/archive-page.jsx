@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
-import { NOTE_TITLE_PATTERN, NotesContext } from "@/app";
+import { NOTE_TITLE_PATTERN } from "@/app/constants";
+import { NotesContext } from "@/app/contexts";
 import { PageLayout } from "@/components";
 import { NoteCard } from "@/components/atoms";
 

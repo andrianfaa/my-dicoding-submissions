@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useContext } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { Modal, Switch } from "@/components/atoms";
-import { SettingContext } from "@/app";
+import { SettingContext } from "@/app/contexts";
 import { useDropdown, useTheme } from "@/hooks";
 
 export function ModalSetting({ open, onClose }) {

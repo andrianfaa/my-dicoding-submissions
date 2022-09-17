@@ -7,7 +7,8 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { Remarkable } from "remarkable";
 import { v4 as uuidv4 } from "uuid";
 import { PageLayout } from "@/components";
-import { NotesContext, NOTE_BODY_PATTERN, NOTE_TITLE_PATTERN } from "@/app";
+import { NOTE_TITLE_PATTERN, NOTE_BODY_PATTERN } from "@/app/constants";
+import { NotesContext } from "@/app/contexts";
 
 function AddNotesPage() {
   const [keyword, setKeyword] = useState("");
